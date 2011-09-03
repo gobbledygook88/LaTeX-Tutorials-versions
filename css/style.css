@@ -1,0 +1,81 @@
+/*------------------------------------*\
+	MAIN
+\*------------------------------------*/
+html {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	color: #444;
+	background: #FFF;
+}
+body {
+	background: none;
+}
+
+
+
+
+
+/*------------------------------------*\
+	TYPE
+\*------------------------------------*/
+h1 {
+	font-weight: bold;
+	font-size: 3em;
+	line-height: 1;
+}
+a {
+	color: inherit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	IMAGES
+\*------------------------------------*/
+#logo {
+	margin-bottom: 1.5em;
+}
+
+
+
+
+
+/*------------------------------------*\
+	NARROW
+\*------------------------------------*/
+/*
+CSS for tablets and narrower devices
+*/
+
+
+
+
+
+@media (min-width: 721px) and (max-width: 960px) {
+	
+}
+/*--- END NARROW ---*/
+
+
+
+
+
+/*------------------------------------*\
+	MOBILE
+\*------------------------------------*/
+/*
+CSS for mobile devices.
+Linearise it!
+*/
+
+
+
+
+
+@media (max-width: 720px) {
+	body {
+		font-size: 0.75em;
+	}
+}
+/*--- END MOBILE ---*/
