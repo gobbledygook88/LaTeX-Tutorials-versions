@@ -27,24 +27,20 @@
 
 </head>
 
-<!--[if lt IE 7 ]> <body <?php body_class('ie6'); ?>> <![endif]-->
-<!--[if IE 7 ]>    <body <?php body_class('ie7'); ?>> <![endif]-->
-<!--[if IE 8 ]>    <body <?php body_class('ie8'); ?>> <![endif]-->
-<!--[if IE 9 ]>    <body <?php body_class('ie9'); ?>> <![endif]-->
+<!--[if lt IE 7 ]> <body <?php body_class('wrapper ie6'); ?>> <![endif]-->
+<!--[if IE 7 ]>    <body <?php body_class('wrapper ie7'); ?>> <![endif]-->
+<!--[if IE 8 ]>    <body <?php body_class('wrapper ie8'); ?>> <![endif]-->
+<!--[if IE 9 ]>    <body <?php body_class('wrapper ie9'); ?>> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <body <?php body_class('wrapper ie6'); ?>> <!--<![endif]-->
 
-	<div id="leftcol" class="grid-4 left">
-		<header>
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<p class="description"><?php bloginfo('description'); ?></p>
-		</header>
-	
-		<nav>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Clients</a></li>
-			<li><a href="#">Contact Us</a></li>
-		</nav>
-		
-		<?php get_sidebar(); ?>
-	</div>
+	<header>
+		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+		<p class="description"><?php bloginfo('description'); ?></p>
+	</header>
+
+	<nav>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Clients</a></li>
+		<li><a href="#">Contact Us</a></li>
+	</nav>
