@@ -21,6 +21,7 @@ h1 {
 	font-weight: bold;
 	font-size: 3em;
 	line-height: 1;
+	margin: 0;
 }
 a {
 	color: inherit;
@@ -34,7 +35,36 @@ a {
 	IMAGES
 \*------------------------------------*/
 #logo {
-	margin-bottom: 1.5em;
+	margin: 0 auto;
+	width: 220px;
+	height: 30px;
+	text-indent: -9999em;
+	background-image: url('http://latextutorials.marcusmo.co.uk/files/2011/04/latextutorials.png');
+}
+
+
+
+
+
+/*------------------------------------*\
+	HEADER
+\*------------------------------------*/
+#banner {
+	text-align: center;
+}
+.description {
+	font-size: 0.79em;
+}
+
+
+
+
+
+/*------------------------------------*\
+	MAIN BODY
+\*------------------------------------*/
+.list-thirds {
+	
 }
 
 

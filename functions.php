@@ -1,5 +1,11 @@
 <?php
 
+/*
+*   Includes
+*/
+// Custom Post Types
+include($GLOBALS["TEMPLATE_RELATIVE_URL"]."inc/functions/equation-post-type.php");
+
 // Custom HTML5 Comment Markup
 function mytheme_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>

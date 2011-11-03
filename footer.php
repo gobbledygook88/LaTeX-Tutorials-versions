@@ -1,4 +1,4 @@
-	<footer>
+	<footer class="grids grid-16">
 		<p>
 			<?php bloginfo('name'); ?> is proudly powered by <a href="http://wordpress.org/">WordPress</a>
 	    	<!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->

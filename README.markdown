@@ -11,6 +11,10 @@ Version 2
 ---------
 New WordPress theme using HTML5 Boilerplate and Inuit.css frameworks.
 
+Key changes:
+- Complete theme rewrite
+- Reverted back to Google Charts API for displaying mathematics
+
 Version 1
 ---------
 Updated website with a WordPress backend for easier collaboration and updates. Front-end restyled.
