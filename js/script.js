@@ -6,7 +6,7 @@
   // Cache DOM elements & constants
   var textarea  = $("#equation-input").find("textarea"),
       preview   = $("#equation-preview"),
-      generate  = $("#equation-generate");
+      generate  = $("#equation-generate"),
       urlGoogle = "http://chart.apis.google.com/chart?cht=tx&chl=",
       urlCogs   = "http://www.codecogs.com/png.latex?",
       value;
