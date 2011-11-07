@@ -4,7 +4,10 @@
 *   Includes
 */
 // Custom Post Types
-include($GLOBALS["TEMPLATE_RELATIVE_URL"]."inc/functions/equation-post-type.php");
+include($GLOBALS["TEMPLATE_RELATIVE_URL"]."inc/functions/custom-post-type-equation.php");
+// Shortcodes
+include($GLOBALS["TEMPLATE_RELATIVE_URL"]."inc/functions/shortcode-snippet.php");
+include($GLOBALS["TEMPLATE_RELATIVE_URL"]."inc/functions/shortcode-toc.php");
 
 // Custom HTML5 Comment Markup
 function mytheme_comment($comment, $args, $depth) {
@@ -34,14 +37,11 @@ function mytheme_comment($comment, $args, $depth) {
 
 automatic_feed_links();
 
-// Widgetized Sidebar HTML5 Markup
-if ( function_exists('register_sidebar') ) {
-	register_sidebar(array(
-		'before_widget' => '<section>',
-		'after_widget' => '</section>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
-	));
+// Custom Menu
+add_action("init", "main_menu_init");
+
+function main_menu_init() {
+  register_nav_menu("main_menu", __("Main Menu"));
 }
 
 // Custom Functions for CSS/Javascript Versioning

@@ -34,7 +34,7 @@ get_header();
 
       echo "<div class='grid-5'>";
         echo "<h5>" . $diff_cap . "</h5>";
-          echo "<ul class='list-thirds'>";
+          echo "<ul>";
 
       // Query arguments
       $args = array(

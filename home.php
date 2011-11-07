@@ -1,13 +1,24 @@
 <?php get_header(); ?>
 
-<div id="main" role="main" class="grids grid-16">
-  <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
+<div id="main" role="main">
+  
+  <?php
+
+    // Query database for random equation
+    $args = array(
+      "post_type" => "equation",
+      "posts_per_page" => 1,
+      "orderby" => "rand"
+    );
+    $wp_query = new WP_Query( $args );
+
+    // Once a random equation has been found, display it
+    while( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
       <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
         <header>
           <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <span class="difficulty"><?php the_terms( $post->ID, 'Difficulty', '', ', ', '' ); ?></span>
+          <span class="difficulty"><?php the_terms( $post->ID, 'Difficulty', '', ', ', '' ); ?> - <?php edit_post_link('Edit Equation', '', ''); ?></span>
         </header>
 
         <section id="equation" class="left">
@@ -37,22 +48,12 @@
 
         <div id="equation-input" class="left">
           <textarea cols="10" rows="15" placeholder="Enter LaTeX here..."></textarea>
+          <input id="equation-generate" type="button" name="generate" value="New Equation">
         </div>
-
-        <footer>
-          <?php edit_post_link('Edit Equation', '', ''); ?>
-        </footer>
       </article>
 
     <?php endwhile; ?>
 
-  <?php else : ?>
-
-    <h2>Not Found</h2>
-    <p>Sorry, but you are looking for something that isn't here.</p>
-    <?php get_search_form(); ?>
-
-  <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

@@ -50,7 +50,12 @@ function lt_equation() {
 /*
 *	Register Taxonomy
 */
-register_taxonomy("Difficulty", array("equation"), array("hierarchical" => true, "label" => "Difficulty", "singular_label" => "Difficulty", "rewrite" => true));
+register_taxonomy("Difficulty", array("equation"), array(
+  "hierarchical" => true, 
+  "label" => "Difficulty", 
+  "singular_label" => "Difficulty", 
+  "rewrite" => array("slug" => "equation/difficulty", "with_front" => false)
+));
 
 
 
