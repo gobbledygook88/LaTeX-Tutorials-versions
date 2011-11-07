@@ -8,6 +8,10 @@ html {
 }
 body {
 	background: none;
+	top: 10px;
+}
+.wrapper {
+	margin: 20px auto;
 }
 
 
@@ -21,6 +25,7 @@ h1 {
 	font-weight: bold;
 	font-size: 3em;
 	line-height: 1;
+	margin: 0;
 }
 a {
 	color: inherit;
@@ -34,7 +39,93 @@ a {
 	IMAGES
 \*------------------------------------*/
 #logo {
-	margin-bottom: 1.5em;
+	margin: 0 auto;
+	width: 600px;
+	height: 114px;
+	text-indent: -9999em;
+	background-image: url('http://latextutorials.co.uk/files/2011/11/logo-600.png');
+}
+
+
+
+
+
+/*------------------------------------*\
+	HEADER
+\*------------------------------------*/
+#banner {
+	text-align: center;
+}
+
+
+
+
+
+/*------------------------------------*\
+	CENTRED NAV
+\*------------------------------------*/
+/*
+http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
+Add a class of centred/centered to create a centred nav.
+*/
+#nav.centred,
+#nav.centered{
+	text-align:center;
+}
+#nav.centred li,
+#nav.centered li{
+	display:inline;
+	float:none;
+}
+#nav.centred a,
+#nav.centered a{
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+
+
+/*------------------------------------*\
+	MAIN BODY
+\*------------------------------------*/
+#main {
+	margin-top: 50px;
+}
+.equation header {
+	margin-bottom: 30px;
+}
+.equation header h3 {
+	margin: 0;
+}
+.equation header .difficulty {
+	font-size: 0.79em;
+	text-transform: capitalize;
+}
+#equation {
+	width: 460px;
+}
+#equation-source, #equation-preview {
+	width: 460px;
+	min-height: 130px;
+	padding-top: 50px;
+	text-align: center;
+}
+#equation-input {
+	width: 480px;
+	height: 360px;
+	text-align: center;
+}
+#equation-input textarea {
+	width: 100%;
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: monospace;
 }
 
 

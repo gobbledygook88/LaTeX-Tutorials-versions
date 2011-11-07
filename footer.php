@@ -1,9 +1,4 @@
-	<footer>
-		<p>
-			<?php bloginfo('name'); ?> is proudly powered by <a href="http://wordpress.org/">WordPress</a>
-	    	<!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
-	    </p>
-	</footer>
+	<!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script>!window.jQuery && document.write('<script src="<?php echo $GLOBALS["TEMPLATE_RELATIVE_URL"] ?>js/jquery-1.4.2.min.js"><\/script>')</script>
@@ -17,7 +12,7 @@
 	<![endif]-->
 
 	<script>
-		var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+		var _gaq = [['_setAccount', 'UA-24583920-3'], ['_trackPageview']];
 	 	(function(d, t) {
 	  		var g = d.createElement(t),
 	      	s = d.getElementsByTagName(t)[0];
