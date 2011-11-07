@@ -93,6 +93,7 @@ Add a class of centred/centered to create a centred nav.
 \*------------------------------------*/
 #main {
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
 .equation header {
 	margin-bottom: 30px;

@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-<div id="main" role="main" class="grids grid-16">
+<div id="main" role="main" class="grids grid-16 cf">
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
 
       <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
         <header>
           <h3><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-          <span class="difficulty"><?php the_terms( $post->ID, 'Difficulty', '', ', ', '' ); ?></span>
+          <span class="difficulty"><?php the_terms( $post->ID, 'Difficulty', '', ', ', '' ); edit_post_link('Edit Equation', ' - ', ''); ?></span>
         </header>
 
         <section id="equation" class="left">
@@ -36,12 +36,8 @@
         </section>
 
         <div id="equation-input" class="left">
-          <textarea cols="10" rows="15" placeholder="Enter LaTeX here..."></textarea>
+          <textarea cols="10" rows="15" placeholder="Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true ); ?>"></textarea>
         </div>
-
-        <footer>
-          <?php edit_post_link('Edit Equation', '', ''); ?>
-        </footer>
       </article>
 
     <?php endwhile; ?>

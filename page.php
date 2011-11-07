@@ -8,7 +8,11 @@
     </header>
   
     <?php the_content(); ?>
-  
+
+    <nav>
+      <div><?php next_posts_link('&laquo; Older Entries') ?></div>
+      <div><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+    </nav>
   </article>
   <?php endwhile; endif; ?>
   <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
