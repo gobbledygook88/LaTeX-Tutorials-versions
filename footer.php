@@ -4,6 +4,7 @@
 
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/plugins.js") ?>
   <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/script.js") ?>
+  <?php if( is_home() ) versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/home-ajax.js"); ?>
 
   <!--[if lt IE 7 ]>
     <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/dd_belatedpng.js") ?>

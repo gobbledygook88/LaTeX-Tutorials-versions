@@ -37,6 +37,11 @@
   // Activate In Fields jQuery Plugin
   $("#equation-input label").inFieldLabels();
 
+  // Generate new equation button
+  generate.click(function() {
+    window.location = "/";
+  });
+
 })(jQuery);
 
 
