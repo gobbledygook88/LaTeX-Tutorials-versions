@@ -6,11 +6,17 @@
 	<!--[if IE]><![endif]-->
 
 	<title><?php wp_title(''); ?></title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="author" content="Marcus Mo">
 
 	<?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."css/inuit.css") ?>
 	<?php versioned_stylesheet($GLOBALS["TEMPLATE_RELATIVE_URL"]."css/style.css") ?>
+	<!--[if lte IE 6]>
+		<style type="text/css" media="screen">
+			label {
+					background: #fff;
+			}
+		</style>
+	<![endif]-->
 
 	<!-- Wordpress Head Items -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />

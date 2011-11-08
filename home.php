@@ -47,7 +47,8 @@
         </section>
 
         <div id="equation-input" class="left">
-          <textarea cols="10" rows="15" placeholder="Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true); ?>"></textarea>
+          <label for="equation-area">Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true ); ?></label><br>
+          <textarea id="equation-area" name="equation-area" cols="10" rows="15"></textarea>
           <input id="equation-generate" type="button" name="generate" value="New Equation">
         </div>
       </article>

@@ -1,10 +1,15 @@
 /*
-* Equation Live Preview scripts
+*   script.js
+*
+* - Equation Live Preview scripts
+* - Generate new equation
+* - In Fields jQuery plugin activation
+*
 */
-(function() {
+(function($) {
   
   // Cache DOM elements & constants
-  var textarea  = $("#equation-input").find("textarea"),
+  var textarea  = $("#equation-area"),
       preview   = $("#equation-preview"),
       generate  = $("#equation-generate"),
       urlGoogle = "http://chart.apis.google.com/chart?cht=tx&chl=",
@@ -34,6 +39,9 @@
 
 
   });
+
+  // Activate In Fields jQuery Plugin
+  $("label").inFieldLabels();
 
 })(jQuery);
 

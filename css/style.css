@@ -108,18 +108,31 @@ Add a class of centred/centered to create a centred nav.
 #equation {
 	width: 460px;
 }
-#equation-source, #equation-preview {
+#equation-source,
+#equation-preview {
 	width: 460px;
 	min-height: 130px;
 	padding-top: 50px;
 	text-align: center;
 }
 #equation-input {
+	position: relative;
 	width: 480px;
 	height: 360px;
 	text-align: center;
 }
-#equation-input textarea {
+#equation-input label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: left;
+	font-family: monospace;
+}
+#equation-input label:after,
+#equation-input label::after {
+	content: "";
+}
+#equation-area {
 	width: 100%;
 	height: 100%;
 	-webkit-box-sizing: border-box;
