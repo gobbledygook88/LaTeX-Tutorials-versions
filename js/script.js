@@ -34,14 +34,8 @@
 
   });
 
-  generate.onClick(function() {
-    
-
-
-  });
-
   // Activate In Fields jQuery Plugin
-  $("label").inFieldLabels();
+  $("#equation-input label").inFieldLabels();
 
 })(jQuery);
 

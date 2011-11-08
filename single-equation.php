@@ -36,7 +36,7 @@
         </section>
 
         <div id="equation-input" class="left">
-          <label for="equation-area">Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true ); ?></label><br>
+          <label for="equation-area">Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true ); ?></label>
           <textarea id="equation-area" name="equation-area" cols="10" rows="15"></textarea>
         </div>
       </article>

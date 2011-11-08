@@ -123,8 +123,9 @@ Add a class of centred/centered to create a centred nav.
 }
 #equation-input label {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 3px;
+	left: 5px;
+	width: 470px;
 	text-align: left;
 	font-family: monospace;
 }

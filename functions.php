@@ -44,6 +44,20 @@ function main_menu_init() {
   register_nav_menu("main_menu", __("Main Menu"));
 }
 
+// Deregister scripts and stylesheets when not used
+add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+function my_deregister_javascript() {
+  if ( !is_page('Contact') ) {
+    wp_deregister_script( 'contact-form-7' );
+  }
+}
+add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+function my_deregister_styles() {
+  if ( !is_page('Contact') ) {
+    wp_deregister_style( 'contact-form-7' );
+  }
+}
+
 // Custom Functions for CSS/Javascript Versioning
 $GLOBALS["TEMPLATE_URL"] = get_bloginfo('template_url')."/";
 $GLOBALS["TEMPLATE_RELATIVE_URL"] = wp_make_link_relative($GLOBALS["TEMPLATE_URL"]);
