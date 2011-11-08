@@ -101,7 +101,8 @@ Add a class of centred/centered to create a centred nav.
 .equation header h3 {
 	margin: 0;
 }
-.equation header .difficulty {
+.equation header .difficulty,
+#page-navigation {
 	font-size: 0.79em;
 	text-transform: capitalize;
 }
