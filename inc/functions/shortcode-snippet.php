@@ -9,13 +9,13 @@ add_shortcode("snippet", "snippet_init");
 function snippet_init($atts, $content) {
   
   // Provide default attributes and overide with those given by user
-  extract(shortcode_atts(array(
-    "" => ""
-  ), $atts));
+  // extract(shortcode_atts(array(
+  //   "" => ""
+  // ), $atts));
 
-  $output  = "<pre><code>";
-  $output .= $content;
-  $output .= "</code></pre>";
+  $content = preg_replace('/^\s+/', "hubbub", $content);
+
+  $output  = "<pre><code>" . strip_tags($content) . "</code></pre>";
 
   // Return HTML
   return $output;
