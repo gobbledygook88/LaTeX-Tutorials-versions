@@ -22,17 +22,16 @@
     <h2 class="pagetitle">Blog Archives</h2>
     <?php } ?>
 
-    <?php while (have_posts()) : the_post(); ?>
     <article <?php post_class() ?>>
-      <header>
-        <h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-      </header>
-      <?php the_content() ?>
-      <footer>
-        <?php edit_post_link('Edit', '', ''); ?>
-      </footer>
-    </article>
+    <?php while (have_posts()) : the_post(); ?>
+      <li>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+          <?php the_title(); ?>
+        </a>
+        <?php edit_post_link('Edit', ' - ', ''); ?>
+      </li>
     <?php endwhile; ?>
+    </article>
 
     <nav>
       <div><?php next_posts_link('&laquo; Older Entries') ?></div>
