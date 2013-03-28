@@ -7,7 +7,7 @@ The site has two primary functions:
 1. Provide short, manageable equations and expressions for users to practice writing LaTeX
 2. Build a library of common mathmatical definitions which may be useful for revision purposes.
 
-Version 1
+Version 3
 ---------
 Large overhaul of user interface
 
