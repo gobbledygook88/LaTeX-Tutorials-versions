@@ -23,24 +23,7 @@
 
         <section id="equation" class="left">
           <div id="equation-source">
-            <?php 
-              
-              // Post values
-              $title     = get_the_title($post->ID);
-              
-              // Google Visualisation API URL
-              $urlGoogle = "http://chart.apis.google.com/chart?cht=tx&chl=";
-              // CodeCogs URL
-              $urlCogs   = "http://www.codecogs.com/png.latex?";
-
-              // Formatted post content
-              $content   = get_the_content();
-              $noTags    = strip_tags($content);
-              $tex       = rawurlencode($noTags);
-            
-              echo "<img src='" . $urlCogs . $tex . "' alt='" . $title . "' />";
-
-            ?>
+            <?php the_content(); ?>
           </div>
 
           <div id="equation-preview"></div>
