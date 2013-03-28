@@ -38,11 +38,11 @@ get_header();
 
       // Query arguments
       $args = array(
-        'post_type' => 'equation',
-        'difficulty' => $diff,
+        'post_type'      => 'equation',
+        'difficulty'     => $diff,
         'posts_per_page' => -1,
-        'order' => 'ASC',
-        'orderby' => 'title'
+        'order'          => 'ASC',
+        'orderby'        => 'title'
       );
       $wp_query = new WP_Query( $args );
 
