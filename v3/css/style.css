@@ -29,9 +29,11 @@ h1 {
 }
 a {
 	color: inherit;
+	/*color: orange;*/
 }
-p a {
-	background: rgba(186,218,85,0.5);
+li a, p a {
+	/*background: rgba(186,218,85,0.5);*/
+	color: orange;
 }
 .cf a {
 	background: none;
