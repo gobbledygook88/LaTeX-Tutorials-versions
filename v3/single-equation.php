@@ -10,17 +10,27 @@
           <span class="difficulty"><?php the_terms( $post->ID, 'Difficulty', '', ', ', '' ); edit_post_link('Edit Equation', ' - ', ''); ?></span>
         </header>
 
-        <section id="equation" class="left">
+        <?php 
+          $content    = get_the_content();
+          $rawcontent = preg_replace("/\[(\/?)latex\]/", "", $content);
+        ?>
+
+        <section id="equation">
           <div id="equation-source">
             <?php the_content(); ?>
           </div>
-
           <div id="equation-preview"></div>
+          <!-- <div id="equation-answer">
+            <?php echo do_shortcode("[snippet]".$rawcontent."[/snippet]"); ?>
+          </div> -->
         </section>
 
-        <div id="equation-input" class="left">
+        <div id="equation-input">
           <label for="equation-area">Enter LaTeX here ... <?php if(get_post_meta( $post->ID, 'equation_comment', true)) echo get_post_meta( $post->ID, 'equation_comment', true ); ?></label>
           <textarea id="equation-area" name="equation-area" cols="10" rows="15"></textarea>
+          <input id="equation-original" type="button" name="original" value="Show Original">
+          <input id="equation-compile" type="button" name="compile" value="Compile">
+          <!-- <input id="equation-check" type="button" name="check" value="Show Answer"> -->
         </div>
       </article>
 

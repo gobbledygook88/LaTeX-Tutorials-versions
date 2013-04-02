@@ -111,19 +111,20 @@ Add a class of centred/centered to create a centred nav.
 	text-transform: capitalize;
 }
 #equation {
-	width: 460px;
+	/*width: 460px;*/
+	min-height: 130px;
 }
 #equation-source,
 #equation-preview {
-	width: 460px;
-	min-height: 130px;
-	padding-top: 50px;
+	/*width: 460px;*/
+	/*min-height: 130px;*/
+	/*padding-top: 50px;*/
 	text-align: center;
 }
 #equation-input {
 	position: relative;
-	width: 480px;
-	height: 360px;
+	/*width: 480px;*/
+	height: 120px;
 	text-align: center;
 }
 #equation-input label {
