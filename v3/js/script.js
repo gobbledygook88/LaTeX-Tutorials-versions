@@ -6,7 +6,7 @@
 * - In Fields jQuery plugin activation
 *
 */
-(function($) {
+;(function($) {
   
   // Cache DOM elements & constants
   var textarea  = $("#equation-area"),
