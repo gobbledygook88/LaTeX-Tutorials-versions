@@ -1015,24 +1015,24 @@ a:link::after,a:visited::after{
 Any links that are root relative to your site need prepending with your URL.
 */
 a[href^="/"]:after{
-	content:" (http://marcusmo.co.uk" attr(href) ")";
+	content:" (http://latextutorials.co.uk" attr(href) ")";
 	font-size:smaller;
 }
 a[href^="/"]::after{
-	content:" (http://marcusmo.co.uk" attr(href) ")";
+	content:" (http://latextutorials.co.uk" attr(href) ")";
 	font-size:smaller;
 }
 /*
 Any Flash/video content can’t be printed so leave a message.
 */
 object:after{
-	content:"Flash/video content. Head to http://marcusmo.co.uk/ to view this content.";
+	content:"Flash/video content. Head to http://latextutorials.co.uk/ to view this content.";
 	display:block;
 	font-weight:bold;
 	margin-bottom:1.5em;
 }
 object::after{
-	content:"Flash/video content. Head to http://marcusmo.co.uk/ to view this content.";
+	content:"Flash/video content. Head to http://latextutorials.co.uk/ to view this content.";
 	display:block;
 	font-weight:bold;
 	margin-bottom:1.5em;

@@ -12,7 +12,8 @@
 
         <?php 
           $content    = get_the_content();
-          $rawcontent = preg_replace("/\[(\/?)latex\]/", "", $content);
+          $rawcontent = preg_replace("/\s*\[(\/?)latex\]\s*/", "", $content);
+          // Strip out the preamble
         ?>
 
         <section id="equation">
@@ -20,9 +21,9 @@
             <?php the_content(); ?>
           </div>
           <div id="equation-preview"></div>
-          <!-- <div id="equation-answer">
-            <?php echo do_shortcode("[snippet]".$rawcontent."[/snippet]"); ?>
-          </div> -->
+          <div id="equation-answer">
+            <?php echo "<pre><code>".$rawcontent."</code></pre>"; ?>
+          </div>
         </section>
 
         <div id="equation-input">
@@ -30,7 +31,6 @@
           <textarea id="equation-area" name="equation-area" cols="10" rows="15"></textarea>
           <input id="equation-original" type="button" name="original" value="Show Original">
           <input id="equation-compile" type="button" name="compile" value="Compile">
-          <!-- <input id="equation-check" type="button" name="check" value="Show Answer"> -->
         </div>
       </article>
 

@@ -1,19 +1,12 @@
+  <footer class="grids grid-16 text-center">
+    <span>Powered by <a href="wordpress.org" target="_blank">Wordpress</a> and <a href="http://quicklatex.com/" target="_blank">QuickLaTeX</a></span>
+  </footer>
+  
   <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
 
   <!--[if lt IE 7 ]>
     <?php versioned_javascript($GLOBALS["TEMPLATE_RELATIVE_URL"]."js/dd_belatedpng.js") ?>
   <![endif]-->
-
-  <script>
-    var _gaq = [['_setAccount', 'UA-24583920-3'], ['_trackPageview']];
-    (function(d, t) {
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.async = true;
-        g.src = '//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g, s);
-    })(document, 'script');
-  </script>
 
   <?php wp_footer(); ?>
 
