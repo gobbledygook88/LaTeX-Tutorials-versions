@@ -39,23 +39,60 @@ automatic_feed_links();
 
 // Custom Menu
 add_action("init", "main_menu_init");
-
 function main_menu_init() {
   register_nav_menu("main_menu", __("Main Menu"));
 }
 
+// Register + enqueue javascript files
+add_action( 'wp_enqueue_scripts', 'my_load_javascript_files' );
+function my_load_javascript_files() {
+  wp_register_script( 'my-plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0', true );
+  wp_register_script( 'my-scripts', get_template_directory_uri() . '/js/script.js', array('my-plugins'), '1.8', true );
+ 
+  wp_enqueue_script( 'my-scripts' );
+}
+
 // Deregister scripts and stylesheets when not used
-add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+add_action( 'wp_print_scripts', 'my_deregister_javascript' );
 function my_deregister_javascript() {
+  // Contact Form 7
   if ( !is_page('Contact') ) {
     wp_deregister_script( 'contact-form-7' );
   }
+
+  // Collabpress
+  if( !is_admin() ) {
+    wp_deregister_script( 'collabpress_frontend_scripts' );
+  }
 }
-add_action( 'wp_print_styles', 'my_deregister_styles', 100 );
+add_action( 'wp_print_styles', 'my_deregister_styles' );
 function my_deregister_styles() {
+  // Contact Form 7
   if ( !is_page('Contact') ) {
     wp_deregister_style( 'contact-form-7' );
   }
+
+  // Collabpress
+  if( !is_admin() ) {
+    wp_deregister_style( 'collabpress_frontend_styles' );
+  }
+}
+
+// Disable RSS feeds
+add_action('do_feed', 'disable_feed', 1);
+add_action('do_feed_rdf', 'disable_feed', 1);
+add_action('do_feed_rss', 'disable_feed', 1);
+add_action('do_feed_rss2', 'disable_feed', 1);
+add_action('do_feed_atom', 'disable_feed', 1);
+function disable_feed() {
+  wp_die( __('Our RSS feed is disabled. Please <a href="/">visit our homepage</a>.') );
+}
+
+add_action('init', 'removeHeadLinks');
+function removeHeadLinks() {
+  remove_action( ‘wp_head’, ‘feed_links_extra’, 3 );
+  remove_action( ‘wp_head’, ‘feed_links’, 2 );
+  remove_action( ‘wp_head’, ‘rsd_link’ );
 }
 
 // Custom Functions for CSS/Javascript Versioning

@@ -29,9 +29,11 @@ h1 {
 }
 a {
 	color: inherit;
+	/*color: orange;*/
 }
-p a {
-	background: rgba(186,218,85,0.5);
+li a, p a {
+	/*background: rgba(186,218,85,0.5);*/
+	color: orange;
 }
 .cf a {
 	background: none;
@@ -86,6 +88,7 @@ Add a class of centred/centered to create a centred nav.
 	display:inline-block;
 	padding-left: 20px;
 	padding-right: 20px;
+	color: #444;
 }
 
 
@@ -111,19 +114,28 @@ Add a class of centred/centered to create a centred nav.
 	text-transform: capitalize;
 }
 #equation {
-	width: 460px;
+	/*width: 460px;*/
+	min-height: 130px;
 }
 #equation-source,
 #equation-preview {
-	width: 460px;
-	min-height: 130px;
-	padding-top: 50px;
+	/*width: 460px;*/
+	/*min-height: 130px;*/
+	/*padding-top: 50px;*/
 	text-align: center;
+}
+#equation-preview,
+#equation-answer {
+	display: none;
+}
+#equation-answer pre {
+	margin-right: 60px;
+	padding: 10px 20px;
 }
 #equation-input {
 	position: relative;
-	width: 480px;
-	height: 360px;
+	/*width: 480px;*/
+	height: 120px;
 	text-align: center;
 }
 #equation-input label {
@@ -153,8 +165,22 @@ pre {
 	padding-right: 10px;
 	background: rgba(0,0,0,0.05);
 	border: 1px solid #ccc;
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+
+
+
+/*------------------------------------*\
+	FOOTER
+\*------------------------------------*/
+footer span {
+	font-size: 0.5em;
+}
 
 
 
